@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Area Calculator</title>
+  <title>Circumference Calculator</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -15,17 +15,17 @@
 <body>
   <main class="container-fluid">
 
-    <h1>Given Radius Display Area</h1>
-    <h3>Right-click / Inspect, then select console</h3>
+    <h1>JavaScript for interactive apps!</h1>
+    <h3>Given Radius, display Circumference</h3>
 
     
 
-    <p>Enter the Number:
-      <input id="Number" type="number" value="2">
+    <p>Enter number:
+      <input id="Number" type="number" >
     </p>
 
-    <p>Enter the Radius :
-      <input id="Radius" type="number" value="4">
+    <p>Enter radius:
+      <input id="Radius" type="number" >
     </p>
 
     <button id="clicker" class="btn btn-primary">Click me!</button>
@@ -39,20 +39,19 @@
 
     console.log('Declare testable functions.....................')
 
-    function mul(x, y) {
-      return x*y*Math.PI
+    function mul(y) {
+      return 2*y*Math.PI
     }
     console.log('Defined mul=' + mul)
 
     console.log('Declare event listeners .......................')
 
-    document.getElementById('clicker').addEventListener('click', function () {
-      const s = document.getElementById('guest').value
+    document.getElementById('clicker').addEventListener('click', () => {
       const i = parseInt(document.getElementById('Number').value)
-      console.log('i=' * i)
+      console.log('i=' + i)
       const j = parseInt(document.getElementById('Radius').value)
-      console.log('j=' * j)
-      const ans = s + ', your Area is ' + mul(i, j) + '.'
+      console.log('j=' + j)
+      const ans = 'your circumference  is ' + 2*j*Math.PI +'.'
       document.getElementById('result').innerHTML = ans
     })
 
